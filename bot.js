@@ -1,3 +1,12 @@
+const Discord = require("discord.js");
+const client = new Discord.Client();
+var prefix = "V";
+
+client.on("message", message => {
+
+            if (message.content.startsWith(prefix + "bc")) {
+                         if (!message.member.hasPermission("ADMINISTRATOR"))  return;
+  let args = message.content.split(" ").slice(1);
   var argresult = args.join(' '); 
   message.guild.members.filter(m => m.presence.status !== 'offline').forEach(m => {
  m.send(`${argresult}\n ${m}`);
@@ -15,7 +24,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : i1Suhaib ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`Volcano Broadcast`,"http://twitch.tv/idk")
+client.user.setGame(`$bc | $bco`,"http://twitch.tv/idk")
 client.user.setStatus("dnd")
 });
 
