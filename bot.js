@@ -44,4 +44,4 @@ message.delete();
 
 
 
-client.login("NTA3OTM2NTQ3OTg4MDQ1ODI0.Dr4wwQ.KKgCwNnbtG9TDKWz4uYNv7ybAyo");
+client.login(process.env.BOT_TOKEN);
